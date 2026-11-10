@@ -1,9 +1,5 @@
 import React from 'react';
-import { TextInput, StyleSheet, View, Text, Dimensions } from 'react-native';
-
-const { width } = Dimensions.get('window');
-const guidelineBaseWidth = 428;
-const scale = (size) => (width / guidelineBaseWidth) * size;
+import { TextInput, StyleSheet, View, Text } from 'react-native';
 
 export default function CustomInput({ label, placeholder, secureTextEntry, value, onChangeText }) {
   return (
@@ -12,7 +8,7 @@ export default function CustomInput({ label, placeholder, secureTextEntry, value
       <TextInput
         style={styles.input}
         placeholder={placeholder}
-        placeholderTextColor="#888"
+        placeholderTextColor="#fff"
         secureTextEntry={secureTextEntry}
         value={value}
         onChangeText={onChangeText}
@@ -23,22 +19,23 @@ export default function CustomInput({ label, placeholder, secureTextEntry, value
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%', // Ocupa 100% da largura do bloco pai
-    marginBottom: 16,
+    width: '100%',                  // Ocupa toda a largura disponível do bloco pai
+    marginBottom: 16,               // Espaçamento abaixo do input
   },
   label: {
-    fontSize: 14,
-    color: '#FFFFFF', // Mudamos para branco para destacar no fundo escuro
-    marginBottom: 6,
-    fontWeight: '500',
+    fontSize: 14,                   // Tamanho do texto do rótulo
+    color: '#000000',               // Cor preta para o rótulo (como no Figma)
+    marginBottom: 6,                // Espaçamento entre o rótulo e a caixa de texto
+    fontWeight: '500',              // Deixa o rótulo levemente em negrito
   },
   input: {
     width: '100%',
-    backgroundColor: '#000000',
-    color: '#FFFFFF',
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    borderRadius: 12,
-    fontSize: 16,
+    backgroundColor: '#000000',     // Fundo preto igual ao design de login
+    color: '#FFFFFF',   
+    boxShadow: '0 0 4px 4px rgba(0,0,0,0.25)', // Sombra leve para dar profundidade
+    paddingHorizontal: 16,          // Espaçamento interno nas laterais
+    paddingVertical: 14,            // Altura interna da caixa de texto
+    borderRadius: 5,               // Cantos arredondados suaves
+    fontSize: 16,                   // Tamanho do texto que o utilizador digita
   },
 });

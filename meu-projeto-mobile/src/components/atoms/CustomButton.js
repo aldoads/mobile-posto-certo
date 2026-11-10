@@ -12,22 +12,19 @@ export default function CustomButton({ title, onPress }) {
 const styles = StyleSheet.create({
   button: {
     width: '100%',
-    backgroundColor: '#1E3F30', // Tom de verde escuro elegante do seu Figma
-    paddingVertical: 16,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 3,
+    backgroundColor: '#1e3932',
+    paddingVertical: 16,            // Altura interna do botão (espaço em cima embaixo)
+    borderRadius: 5,               // Bordas arredondadas suaves
+    alignItems: 'center',           // Centraliza o texto horizontalmente
+    justifyContent: 'center', // Centraliza o textoverticalmente
+    boxShadow: '0 0 4px 4px rgba(0,0,0,0.25)', // Sombra leve para dar profundidade
+    marginTop: 12,
+    
   },
   text: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: 'bold',
-    letterSpacing: 1,
+    color: '#FFFFFF',               // Texto na cor branca
+    fontSize: 16,                   // Tamanho da letra
+    fontWeight: 'semibold',             // Letra em negrito
+    letterSpacing: 1,               // Espaçamento leve entre as letras
   },
 });
