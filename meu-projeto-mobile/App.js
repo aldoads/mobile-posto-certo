@@ -46,9 +46,7 @@ export default function App() {
               value={senha}
               onChangeText={setSenha}
             />
-            <View style={styles.eyeIconContainer}>
-              <Text style={styles.eyeIcon}>👁️</Text>
-            </View>
+
           </View>
 
           {/* Manter Conectado */}
