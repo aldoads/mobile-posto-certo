@@ -115,7 +115,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '80%',
     backgroundColor: '#FFFFFF',
-
     overflow: 'hidden',
     justifyContent: 'space-between',
     shadowOffset: { width: 0, height: 10 },
