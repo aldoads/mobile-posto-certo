@@ -13,12 +13,13 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     backgroundColor: '#1e3932',
-    paddingVertical: 16,            // Altura interna do botão (espaço em cima embaixo)
+    paddingVertical: 30,            // Altura interna do botão (espaço em cima embaixo)
     borderRadius: 5,               // Bordas arredondadas suaves
     alignItems: 'center',           // Centraliza o texto horizontalmente
     justifyContent: 'center', // Centraliza o textoverticalmente
     boxShadow: '0 0 4px 4px rgba(0,0,0,0.25)', // Sombra leve para dar profundidade
     marginTop: 12,
+    marginBottom: 6,               // Espaçamento abaixo do botão
     
   },
   text: {

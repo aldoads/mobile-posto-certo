@@ -20,7 +20,7 @@ export default function CustomInput({ label, placeholder, secureTextEntry, value
 const styles = StyleSheet.create({
   container: {
     width: '100%',                  // Ocupa toda a largura disponível do bloco pai
-    marginBottom: 16,               // Espaçamento abaixo do input
+    marginBottom: 34,               // Espaçamento abaixo do input
   },
   label: {
     fontSize: 14,                   // Tamanho do texto do rótulo
@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',   
     boxShadow: '0 0 4px 4px rgba(0,0,0,0.25)', // Sombra leve para dar profundidade
     paddingHorizontal: 16,          // Espaçamento interno nas laterais
-    paddingVertical: 14,            // Altura interna da caixa de texto
+    paddingVertical: 22,            // Altura interna da caixa de texto
     borderRadius: 5,               // Cantos arredondados suaves
-    fontSize: 16,                   // Tamanho do texto que o utilizador digita
+    fontSize: 14,                   // Tamanho do texto que o utilizador digita
   },
 });
