@@ -148,15 +148,17 @@ const styles = StyleSheet.create({
   logo: {
     width: 65,
     height: 65,
-    marginBottom: 4,
+    marginBottom: 2,
+    
   },
   brandTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#000000',
+    marginBottom: 20,
   },
   sectionTitle: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#000000',
     marginBottom: 8,
