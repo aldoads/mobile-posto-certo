@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     color: Colors.primary,
-    marginTop: 20, // Ajuste ideal para o respiro de topo sem exageros
+    marginTop: 80, // Ajuste ideal para o respiro de topo sem exageros
     marginBottom: 6,
     textAlign: 'center',
   },
@@ -37,16 +37,14 @@ export const styles = StyleSheet.create({
   searchBoxContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 1.5,
-    borderColor: Colors.borderLight,
-    borderRadius: 12,
+    borderRadius: 6,
     paddingHorizontal: 16,
     paddingVertical: 20,
     backgroundColor: Colors.backgroundWhite,
-    marginBottom: 28,
+    marginBottom: 40,
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.5,
     shadowRadius: 4,
     elevation: 4,
   },
@@ -63,7 +61,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',   // Alinha os itens pelo topo do bloco
     justifyContent: 'center',    // Mantém o bloco inteiro centralizado na horizontal da tela
-    marginBottom: 28,
+    marginBottom: 50,
     paddingVertical: 4,
     width: '100%',
   },

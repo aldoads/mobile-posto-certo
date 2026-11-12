@@ -4,12 +4,14 @@ import { Text, View, SafeAreaView, TextInput, TouchableOpacity, ScrollView } fro
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from './LocationScreen.styles';
 import { Colors } from '../constants/theme';
+import AddressCard from '../components/molecules/AddressCard'; // <-- Importando o nosso componente reutilizável
 
 export default function LocationScreen() {
   const [searchAddress, setSearchAddress] = useState('');
   const [userAddress, setUserAddress] = useState('Av. Severino Alves, 157 - Bairro Centro, Patos - PB');
   const [addressOne, setAddressOne] = useState('');
   const [addressTwo, setAddressTwo] = useState('');
+  
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -47,27 +49,19 @@ export default function LocationScreen() {
             </View>
           </TouchableOpacity>
 
-        {/* Card de Endereço 1 */}
-        <TouchableOpacity style={styles.addressCard} onPress={() => { /* Ação */ }}>
-          <Text style={styles.addressCardText}>
-            <Text style={styles.addressCardTitle}>Endereço 1:</Text>
-            {'\n'}
-            <Text style={addressOne ? styles.addressCardText : styles.addressCardPlaceholder}>
-              {addressOne || 'Nenhum endereço cadastrado'}
-            </Text>
-          </Text>
-        </TouchableOpacity>
+          {/* Card de Endereço 1 (Usando a molécula reutilizável) */}
+          <AddressCard 
+            title="Endereço 1:" 
+            address={addressOne} 
+            onPress={() => { /* Ação ao clicar no Endereço 1 */ }} 
+          />
 
-        {/* Card de Endereço 2 */}
-        <TouchableOpacity style={styles.addressCard} onPress={() => { /* Ação */ }}>
-          <Text style={styles.addressCardText}>
-            <Text style={styles.addressCardTitle}>Endereço 2:</Text>
-            {'\n'}
-            <Text style={addressTwo ? styles.addressCardText : styles.addressCardPlaceholder}>
-              {addressTwo || 'Nenhum endereço cadastrado'}
-            </Text>
-          </Text>
-        </TouchableOpacity>
+          {/* Card de Endereço 2 (Usando a molécula reutilizável) */}
+          <AddressCard 
+            title="Endereço 2:" 
+            address={addressTwo} 
+            onPress={() => { /* Ação ao clicar no Endereço 2 */ }} 
+          />
 
         </View>
 
