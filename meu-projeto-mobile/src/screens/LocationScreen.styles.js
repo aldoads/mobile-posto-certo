@@ -127,4 +127,5 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold', // Negrito
     color: Colors.primary, // Cor primária (verde escuro)
   },
+  
 });

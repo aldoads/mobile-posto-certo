@@ -4,11 +4,13 @@ import { Text, View, SafeAreaView, Image, TouchableOpacity, ScrollView } from 'r
 import CustomInput from '../components/atoms/CustomInput';
 import CustomButton from '../components/atoms/CustomButton';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router'; // <-- Importante para o Expo Router
 
 // Importando os estilos de forma profissional da mesma pasta
 import { styles } from './LoginScreen.styles';
 
-export default function LoginScreen({ navigation }) {
+export default function LoginScreen() {
+  const router = useRouter(); // <-- Inicializando o router do Expo Router
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [manterConectado, setManterConectado] = useState(false);
@@ -70,10 +72,10 @@ export default function LoginScreen({ navigation }) {
             <Text style={styles.checkboxLabel}>Manter conectado</Text>
           </View>
 
-          {/* Botão de Login com Navegação configurada */}
+          {/* Botão de Login utilizando o router do Expo Router */}
           <CustomButton 
             title="ENTRE" 
-            onPress={() => navigation.navigate('Location')} 
+            onPress={() => router.push('/location')} // Redireciona para a rota configurada pelo seu colega
           />
 
           {/* Esqueci minha senha */}

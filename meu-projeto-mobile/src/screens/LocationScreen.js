@@ -4,14 +4,16 @@ import { Text, View, SafeAreaView, TextInput, TouchableOpacity, ScrollView } fro
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from './LocationScreen.styles';
 import { Colors } from '../constants/theme';
-import AddressCard from '../components/molecules/AddressCard'; // <-- Importando o nosso componente reutilizável
+import AddressCard from '../components/molecules/AddressCard'; // Molécula reutilizável
+import CustomButton from '../components/atoms/CustomButton';    // Átomo reutilizável de botão
+import { useRouter } from 'expo-router';
 
 export default function LocationScreen() {
+  const router = useRouter();
   const [searchAddress, setSearchAddress] = useState('');
   const [userAddress, setUserAddress] = useState('Av. Severino Alves, 157 - Bairro Centro, Patos - PB');
   const [addressOne, setAddressOne] = useState('');
   const [addressTwo, setAddressTwo] = useState('');
-  
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -49,23 +51,29 @@ export default function LocationScreen() {
             </View>
           </TouchableOpacity>
 
-          {/* Card de Endereço 1 (Usando a molécula reutilizável) */}
+          {/* Card de Endereço 1 */}
           <AddressCard 
             title="Endereço 1:" 
             address={addressOne} 
-            onPress={() => { /* Ação ao clicar no Endereço 1 */ }} 
+            onPress={() => {}} 
           />
 
-          {/* Card de Endereço 2 (Usando a molécula reutilizável) */}
+          {/* Card de Endereço 2 */}
           <AddressCard 
             title="Endereço 2:" 
             address={addressTwo} 
-            onPress={() => { /* Ação ao clicar no Endereço 2 */ }} 
+            onPress={() => {}} 
+          />
+
+          {/* Botão Pular utilizando o átomo CustomButton reutilizável */}
+          <CustomButton 
+            title="PULAR" 
+            onPress={() => router.push('/busca')} 
           />
 
         </View>
 
-        {/* Rodapé: Cadastrar em destaque e maior */}
+        {/* Rodapé: Cadastrar novo endereço */}
         <TouchableOpacity style={styles.footerAction}>
             <Text style={styles.footerActionText}>
             <Text style={styles.footerActionHighlight}>Cadastrar</Text> novo endereço
