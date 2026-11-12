@@ -4,9 +4,9 @@ import { Text, View, SafeAreaView, Image, TouchableOpacity, ScrollView } from 'r
 import CustomInput from '../components/atoms/CustomInput';
 import CustomButton from '../components/atoms/CustomButton';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router'; // <-- Importante para o Expo Router
+import { Colors } from '../constants/theme';
+import { useRouter } from 'expo-router'; 
 
-// Importando os estilos de forma profissional da mesma pasta
 import { styles } from './LoginScreen.styles';
 
 export default function LoginScreen() {
@@ -58,7 +58,7 @@ export default function LoginScreen() {
               <Ionicons 
                 name={mostrarSenha ? "eye-outline" : "eye-off-outline"} 
                 size={20} 
-                color="#888888" 
+                color={Colors.eyeIcon} 
               />
             </TouchableOpacity>
           </View>
