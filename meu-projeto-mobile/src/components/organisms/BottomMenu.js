@@ -11,7 +11,7 @@ const ITENS = [
   { id: 'busca', rotulo: 'Busca', imagem: require('../../../assets/busca/menu-busca.png'), largura: 34, altura: 44, rota: '/busca' },
   { id: 'favoritos', rotulo: 'Favoritos', imagem: require('../../../assets/busca/menu-favoritos.png'), largura: 44, altura: 49, rota: null },
   { id: 'comparar', rotulo: 'Comparar', imagem: require('../../../assets/busca/menu-comparar.png'), largura: 52, altura: 47, rota: null },
-  { id: 'menu', rotulo: 'Menu', imagem: require('../../../assets/busca/menu-menu.png'), largura: 41, altura: 45, rota: null },
+  { id: 'menu', rotulo: 'Menu', imagem: require('../../../assets/busca/menu-menu.png'), largura: 41, altura: 45, rota: '/menu' },
 ];
 
 export default function BottomMenu({ ativo }) {
