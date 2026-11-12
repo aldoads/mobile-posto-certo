@@ -68,7 +68,7 @@ export default function LocationScreen() {
           {/* Botão Pular utilizando o átomo CustomButton reutilizável */}
           <CustomButton 
             title="PULAR" 
-            onPress={() => router.push('/busca')} 
+            onPress={() => router.push('/home')} 
           />
 
         </View>

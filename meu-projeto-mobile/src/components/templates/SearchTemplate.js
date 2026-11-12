@@ -8,7 +8,7 @@ import { APP_MAX_WIDTH, PADDING_HORIZONTAL } from '../../theme/layout';
 
 // Estrutura compartilhada da área de Busca: cabeçalho + conteúdo rolável + menu inferior.
 // No Expo Web o app fica limitado a APP_MAX_WIDTH e centralizado, mantendo a aparência mobile.
-export default function SearchTemplate({ titulo = 'Busca', onVoltar, children }) {
+export default function SearchTemplate({ titulo = 'Busca', ativo = 'busca', onVoltar, children }) {
   return (
     <View style={styles.pagina}>
       <StatusBar style="light" />
@@ -22,7 +22,7 @@ export default function SearchTemplate({ titulo = 'Busca', onVoltar, children })
         >
           {children}
         </ScrollView>
-        <BottomMenu ativo="busca" />
+        <BottomMenu ativo={ativo} />
       </View>
     </View>
   );
