@@ -5,7 +5,6 @@ import SearchField from '../components/molecules/SearchField';
 import RecentSearches from '../components/organisms/RecentSearches';
 import { useHistorico } from '../context/HistoricoContext';
 
-// Busca inicial (BUSCA 2.png): campo vazio + histórico "Visualizados recentemente".
 export default function BuscaInicialScreen() {
   const router = useRouter();
   const { itens, adicionar, remover } = useHistorico();

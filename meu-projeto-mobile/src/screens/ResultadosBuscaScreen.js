@@ -21,7 +21,6 @@ const OPCOES = [
   { valor: FILTRO_COMBUSTIVEL, rotulo: 'Combustível' },
 ];
 
-// Resultados (BUSCA 3.png e BUSCA 4.png): mesmo layout, muda o filtro selecionado.
 export default function ResultadosBuscaScreen() {
   const router = useRouter();
   const larguraApp = useLarguraApp();
