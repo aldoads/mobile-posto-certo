@@ -4,7 +4,7 @@ import { normalizar } from '../utils/busca';
 
 const CHAVE = '@postocerto:historico';
 const LIMITE = 8;
-// Itens demonstrativos do Figma; usados só enquanto nada foi salvo no aparelho.
+
 const INICIAL = ['Brasília', 'Terezinha'];
 
 const HistoricoContext = createContext(null);
@@ -23,7 +23,7 @@ export function HistoricoProvider({ children }) {
           if (Array.isArray(lista)) setItens(lista);
         }
       } catch (erro) {
-        // Sem persistência o histórico continua funcionando em memória.
+        
       } finally {
         if (ativo) setCarregado(true);
       }
