@@ -7,14 +7,14 @@ import { colors } from '../../theme/colors';
 // Cada asset do Figma já traz o ícone E o rótulo ("Início", "Busca"...), nos tamanhos originais.
 // `rota`: preencher quando a tela existir. Itens sem rota ainda não navegam (telas da equipe).
 const ITENS = [
-  { id: 'inicio', rotulo: 'Início', imagem: require('../../../assets/busca/menu-inicio.png'), largura: 28, altura: 41, rota: null },
+  { id: 'inicio', rotulo: 'Início', imagem: require('../../../assets/busca/menu-inicio.png'), largura: 28, altura: 41, rota: '/home' },
   { id: 'busca', rotulo: 'Busca', imagem: require('../../../assets/busca/menu-busca.png'), largura: 34, altura: 44, rota: '/busca' },
   { id: 'favoritos', rotulo: 'Favoritos', imagem: require('../../../assets/busca/menu-favoritos.png'), largura: 44, altura: 49, rota: null },
-  { id: 'comparar', rotulo: 'Comparar', imagem: require('../../../assets/busca/menu-comparar.png'), largura: 52, altura: 47, rota: null },
+  { id: 'comparar', rotulo: 'Comparar', imagem: require('../../../assets/busca/menu-comparar.png'), largura: 52, altura: 47, rota: '/comparar' },
   { id: 'menu', rotulo: 'Menu', imagem: require('../../../assets/busca/menu-menu.png'), largura: 41, altura: 45, rota: '/menu' },
 ];
 
-export default function BottomMenu({ ativo }) {
+export default function BottomMenu({ ativo, style }) {
   const router = useRouter();
   const insets = useSafeAreaInsets();
 
@@ -24,7 +24,7 @@ export default function BottomMenu({ ativo }) {
   };
 
   return (
-    <View style={[styles.menu, { paddingBottom: Math.max(insets.bottom, 30) }]}>
+    <View style={[styles.menu, { paddingBottom: Math.max(insets.bottom, 30) }, style]}>
       {ITENS.map((item) => {
         const selecionado = item.id === ativo;
         return (
